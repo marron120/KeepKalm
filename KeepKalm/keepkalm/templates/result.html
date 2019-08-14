@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KEEP KALM</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <ul>
+
+          {% if option == "I need Jesus" %}
+              <li class="red"> {{option}} Please Call National Suicide Prevention Lifeline 1-800-273-8255 </li>
+          {% else %}
+              <li> {{option}} </li>
+          {% endif %}
+        <li> {{option2}} </li>
+        <li> {{option3}} </li>
+        <li> {{option4}}
+              {% if option4 == "Moderate" %}
+                  <a href="https://www.youtube.com/watch?v=1RhQwA4F3vI"> LINK FOR HELP </a>
+              {% elif option4 == "All The Time"%}
+                  <a href="https://www.youtube.com/watch?v=Lmw4lzjEqD8"> LINK FOR HELP </a>
+              {% elif option4 == "Never"%}
+                  <a href="https://www.youtube.com/watch?v=3JWTaaS7LdU&list=RDEM9vo9CnFUQkEe4BPgkHUIZQ&start_radio=1"> LINK FOR HELP </a>
+                  {% else %}
+                  <li> {{option}} </li>
+              {% endif %}
+        </li>
+        <li> {{option5}}
+            {% if option5 == "Moderate" %}
+                <a href="https://www.verywellmind.com/abdominal-breathing-2584115"> LINK FOR HELP </a>
+            {% elif option5 == "All The Time"%}
+                <a href="https://www.verywellfit.com/essential-yoga-poses-for-beginners-3566747"> LINK FOR HELP </a>
+            {% elif option5 == "Never"%}
+                <a href="https://www.youtube.com/watch?v=3JWTaaS7LdU&list=RDEM9vo9CnFUQkEe4BPgkHUIZQ&start_radio=1"> You Will Fine </a>
+                {% else %}
+                <li> {{option}} </li>
+            {% endif %}
+      </li>
+
+
+    </ul>
+
+
+
+</body>
+</html>
