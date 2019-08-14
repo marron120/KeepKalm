@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KEEP KALM</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <ul>
+
+          {% if option == "I need Jesus" %}
+              <li class="red"> {{option}} Please call 911 </li>
+          {% else %}
+              <li> {{option}} </li>
+          {% endif %}
+        <li> {{option2}} </li>
+        <li> {{option3}} </li>
+        <li> {{option4}}
+              {% if option4 == "Moderate" %}
+                  <a href="https://www.youtube.com/watch?v=1RhQwA4F3vI"> LINK FOR HELP </a>
+              {% elif option4 == "Most Times"%}
+                  <a href="https://www.youtube.com/watch?v=H-bTMbePj0A"> LINK FOR HELP </a>
+              {% else %}
+                  <li> {{option}} </li>
+              {% endif %}
+        </li>
+
+        <li> {{option5}} </li>
+
+    </ul>
+
+
+
+</body>
+</html>
