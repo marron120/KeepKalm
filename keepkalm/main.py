@@ -37,7 +37,20 @@ class Response(webapp2.RequestHandler):
         self.response.write(t.render(d))
 
 
+class MainPage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = jinja_env.get_template('templates/front.html')
+        self.response.write(welcome_template.render({'animate': True}))  # the response
+
+class WelcomePage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = jinja_env.get_template('templates/front.html')
+        self.response.write(welcome_template.render({'animate': False}))  # the response
+
+
 app = webapp2.WSGIApplication([
-        ('/', KeepKalm),
+        ('/', MainPage),
+        ('/welcome', WelcomePage),
+        ('/keepkalm', KeepKalm),
         ('/response', Response),
         ], debug=True)
