@@ -5,7 +5,7 @@
     <title>KEEP KALM</title>
     <link rel="stylesheet" href="/styles/style.css">
   </head>
-  <body>
+  <body class="body">
     <ul>
 
           {% if option == "I need Jesus" %}
@@ -17,31 +17,39 @@
         <li> {{option3}} </li>
         <li> {{option4}}
               {% if option4 == "Moderate" %}
-                  <a href="https://www.youtube.com/watch?v=1RhQwA4F3vI"> Sounds Of Night </a>
+                  <a href="https://www.youtube.com/watch?v=1RhQwA4F3vI"> LINK FOR HELP </a>
               {% elif option4 == "All The Time"%}
-                  <a href="https://www.youtube.com/watch?v=Lmw4lzjEqD8"> Adorable Seal </a>
+                  <a href="https://www.youtube.com/watch?v=Lmw4lzjEqD8"> LINK FOR HELP </a>
               {% elif option4 == "Never"%}
-                  <a href="https://www.youtube.com/watch?v=3JWTaaS7LdU&list=RDEM9vo9CnFUQkEe4BPgkHUIZQ&start_radio=1"> I Will Always Love U </a>
+                  <a href="https://www.youtube.com/watch?v=3JWTaaS7LdU&list=RDEM9vo9CnFUQkEe4BPgkHUIZQ&start_radio=1"> LINK FOR HELP </a>
                   {% else %}
                   <li> {{option}} </li>
               {% endif %}
         </li>
         <li> {{option5}}
             {% if option5 == "Moderate" %}
-                <a href="https://www.verywellmind.com/abdominal-breathing-2584115"> Breathing Exercises </a>
+                <a href="https://www.verywellmind.com/abdominal-breathing-2584115"> LINK FOR HELP </a>
             {% elif option5 == "All The Time"%}
                 <a href="https://www.verywellfit.com/essential-yoga-poses-for-beginners-3566747"> LINK FOR HELP </a>
             {% elif option5 == "Never"%}
-                <a href="https://www.youtube.com/watch?v=hwZNL7QVJjE"> You Will Fine </a>
+                <a href="https://www.youtube.com/watch?v=3JWTaaS7LdU&list=RDEM9vo9CnFUQkEe4BPgkHUIZQ&start_radio=1"> You Will Fine </a>
                 {% else %}
                 <li> {{option}} </li>
             {% endif %}
       </li>
-
-
     </ul>
+    
+    <form action="/" method="GET" name="suggest">
+        <label for="Suggestion">Suggestion:</label>
+        <br />
+        <input type="textarea" height="100px" width="60px" name="text" value="Add Suggestion Here">
+        <input type="button" value="Submit" name="button" onclick="Respond()" />
+    </form>
+    <p id="response">
 
+    </p>
 
+    <script src="/scripts/script.js"></script>
 
 </body>
 </html>
