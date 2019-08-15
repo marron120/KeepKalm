@@ -1,8 +1,10 @@
-body {
+.body {
   font-size: 2.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: yellow;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
   background-image: url("https://i.pinimg.com/originals/16/6b/0c/166b0c5b64ffb3121f3505b714b3ef88.jpg")
 }
 

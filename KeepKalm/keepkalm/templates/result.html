@@ -5,7 +5,7 @@
     <title>KEEP KALM</title>
     <link rel="stylesheet" href="/styles/style.css">
   </head>
-  <body>
+  <body class="body">
     <ul>
 
           {% if option == "I need Jesus" %}
@@ -37,11 +37,19 @@
                 <li> {{option}} </li>
             {% endif %}
       </li>
-
-
     </ul>
+    
+    <form action="/" method="GET" name="suggest">
+        <label for="Suggestion">Suggestion:</label>
+        <br />
+        <input type="textarea" height="100px" width="60px" name="text" value="Add Suggestion Here">
+        <input type="button" value="Submit" name="button" onclick="Respond()" />
+    </form>
+    <p id="response">
 
+    </p>
 
+    <script src="/scripts/script.js"></script>
 
 </body>
 </html>
