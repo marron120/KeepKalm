@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if animate %}
+        <meta http-equiv="refresh" content="20;url=/welcome" />
+    {% endif %}
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body onload="startPlayback()">
+        
+<div class="container">
+        
+    <div class="innner">
+            {% if animate %}
+                <h1 class="gray animate-fading"> take a minute for yourself </h1>
+            {% else %}
+                <h1 class="gray"> welcome </h1>
+                <a href="/questions">
+                    <input type="button" value="continue to questions" class="button">
+                </a>
+            {% endif %}
+
+            <audio id="loadaudio">
+                <source src="/resources/rain.ogg" type="audio/ogg">
+                <source src="/resources/rain.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+   
+    </div>
+</div>
+<script> 
+function startPlayback() {
+  return document.querySelector('#loadaudio').play();
+}
+
+console.log('Attempting to play automatically...');
+
+startPlayback().then(function() {
+  console.log('The play() Promise fulfilled! Rock on!');
+}).catch(function(error) {
+  console.log('The play() Promise rejected!');
+  console.log('Use the Play button instead.');
+  console.log(error);
+
+  var playButton = document.querySelector('#loadaudio');
+  // The user interaction requirement is met if
+  // playback is triggered via a click event.
+  playButton.addEventListener('click', startPlayback);
+  playButton.hidden = false;
+});
+ </script>
+</body>
+</html>
